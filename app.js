@@ -15,7 +15,7 @@ let pet = {
 // play (+2 happy, -1 energy) DONE
 // exercise (+2 health, +1 happy, -2 energy) DONE
 
-// Make function to check stats for each action
+// Make nap function 
 
 function nap() {
     if (pet.energy > 4 ){
@@ -35,7 +35,7 @@ function nap() {
 
 function play() {
   if (pet.sleeping == true) {
-    document.getElementById("update").innerHTML = `${pet.name} is asleep.`;
+    document.getElementById("update").innerHTML = `${pet.name} is asleep!`;
   } else if (pet.health < 3) {
     document.getElementById(
       "update"
@@ -56,7 +56,7 @@ function exercise() {
   if (pet.sleeping == true) {
     document.getElementById(
         "update"
-      ).innerHTML = `${pet.name} is sleeping.`;
+      ).innerHTML = `${pet.name} is sleeping!`;
   } else if (pet.energy < 4) {
     document.getElementById(
       "update"
@@ -100,7 +100,9 @@ function makeButtons() {
 }
 
 function eatSweets() {
-  if (pet.hunger == 0) {
+    if (pet.sleeping == true) {
+        document.getElementById("update").innerHTML = `${pet.name} is asleep!`;
+    } else if (pet.hunger == 0) {
     document.getElementById("update").innerHTML = `${pet.name} is not hungry`;
   } else {
     document.getElementById("update").innerHTML = "eating sweets :3";
@@ -112,7 +114,9 @@ function eatSweets() {
 }
 
 function eatVeg() {
-  if (pet.hunger == 0) {
+  if (pet.sleeping == true) {
+      document.getElementById("update").innerHTML = `${pet.name} is asleep!`;
+  } else if (pet.hunger == 0) {
     document.getElementById("update").innerHTML = `${pet.name} is not hungry`;
   } else {
     document.getElementById("update").innerHTML = "eating vegetals :/";
