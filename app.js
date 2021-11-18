@@ -15,7 +15,7 @@ let pet = {
 // play (+2 happy, -1 energy) DONE
 // exercise (+2 health, +1 happy, -2 energy) DONE
 
-// Make nap function 
+// Make nap function DONE
 
 function nap() {
     if (pet.energy > 4 ){
